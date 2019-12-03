@@ -1,0 +1,9 @@
+Python 3.7.3 (default, Apr 09 2019, 05:18:21) [GCC] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import jwt
+>>> secret_key = "a random, long, sequence of characters that only the server knows"
+>>> token = jwt.encode({'user_id': 1}, secret_key, algorithm='HS256').decode('utf-8')
+>>> token
+'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxfQ.B3uIbB_dcteL8RK9IgzfKjBCpwBa7THOyo5qeCKPbmg'
+>>> 
+
