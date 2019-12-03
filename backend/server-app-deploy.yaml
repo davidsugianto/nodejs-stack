@@ -15,10 +15,13 @@ spec:
       containers:
       - name: todo-server-app-1
         image: todo-server-kubernetes-app:latest 
-        # resources:
-        #   limits:
-        #     memory: "128Mi"
-        #     cpu: "500m"
+        resources:
+          requests:
+            memory: "64Mi"
+            cpu: "256m"
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
         ports:
         - containerPort: 5000
         imagePullPolicy: IfNotPresent

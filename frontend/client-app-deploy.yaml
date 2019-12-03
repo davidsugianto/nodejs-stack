@@ -16,7 +16,10 @@ spec:
       - name: todo-client-app-1
         image: idiots718/todo-client-kubernetes-app:latest
         imagePullPolicy: IfNotPresent
-        # resources:
-        #   limits:
-        #     memory: "128Mi"
-        #     cpu: "500m"
+        resources:
+          requests:
+            memory: "64Mi"
+            cpu: "256m"
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
